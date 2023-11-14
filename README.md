@@ -1,7 +1,7 @@
 # HMC-OSIC-TOOLS
 This repository aims to combine the setups of
 
-- [IIC-OSIC-TOOLS](https://github.com/iic-jku/iic-osic-tools), a [Docker](https://www.ibm.com/topics/docker) container that includes a collection of open source integrated circuit design softwares and open source process design kit
+- [IIC-OSIC-TOOLS](https://github.com/iic-jku/iic-osic-tools), a [Docker](https://www.ibm.com/topics/docker) container that includes a collection of open source integrated circuit design softwares and open source process design kits
 - [laygo2_workspace_sky130](https://github.com/niftylab/laygo2_workspace_sky130); LAYGO2 is a layout generator that works with the layout tool [Magic](http://opencircuitdesign.com/magic/), and this workspace specifically works with the process design kit [SKY130](https://skywater-pdk.readthedocs.io/en/main/)
 
 It includes scripts to
@@ -54,7 +54,7 @@ X11 allows the Docker container to display the graphical interfaces for its apps
 
 1. Open the Command Prompt.
 2. Run `git config --global core.autocrlf input` to [configure Git to ensure line endings in files you clone are correct for Linux](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings?platform=linux). 
-3. Change the working directory to where you want to place the repo, and run `git clone [URL of this repo]` to clone this repo.
+3. Change the working directory to where you want to place the repo, and run `git clone https://github.com/HMC-ACE/HMC-OSIC-TOOLS.git` to clone this repo.
 4. Change the working directory to the newly created repo, and run `git submodule update --init --recursive --remote` to clone the IIC-OSIC-TOOLS and laygo2_workspace_sky130 submodules.
 5. Change the working directory to the repo's `Setup Scripts` folder.
 6. Run `.\setup_windows_iic.bat` to create the Docker container and run it. 
@@ -67,7 +67,6 @@ X11 allows the Docker container to display the graphical interfaces for its apps
 This setup should work mostly the same as the [IIC-OSIC-TOOLS](https://github.com/iic-jku/IIC-OSIC-TOOLS) and [laygo2_workspace_sky130](https://github.com/niftylab/laygo2_workspace_sky130) repos; Refer to their documentations for more information. The only differences are the following:
 
 1. When working inside the Docker container, its directory `/foss/designs` will be linked to the directory of this repo on your computer rather than the default `%USERPROFILE%\eda\designs` used by IIC-OSIC-TOOLS.
-    - e.g. `/foss/designs` will show files in `C:\Users\[your_username]\Documents\Github\custom_OSIC-TOOLS`
 2. When running the Python code for LAYGO2, use the new `compile_tch.sh` script that was added to the `laygo_workspace_sky130` folder, like so:
 
     `./compile_tcl.sh laygo2_example/logic/inv.py`
