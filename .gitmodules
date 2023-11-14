@@ -1,0 +1,6 @@
+[submodule "IIC-OSIC-TOOLS"]
+	path = IIC-OSIC-TOOLS
+	url = https://github.com/iic-jku/IIC-OSIC-TOOLS.git
+[submodule "laygo2_workspace_sky130"]
+	path = laygo2_workspace_sky130
+	url = https://github.com/niftylab/laygo2_workspace_sky130.git
